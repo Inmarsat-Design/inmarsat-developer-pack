@@ -10,13 +10,13 @@ You will need to be confident with HTML and CSS. We use the [BEM](http://getbem.
 
 ## Getting started
 
-Download the latest [release](/releases) of this project.
+Download the latest [release](https://github.com/Inmarsat-Design/developer-pack/releases) of this project.
 
 Include the `inm-styles.min.css` file in the head of your project. If you want to use the provided font, make sure it remains in the correct path relative to the css file.
 
-### Global styles
+### Styles
 
-The stylesheet should immediately take effect as we use bootstrap's [reboot](https://getbootstrap.com/docs/4.0/content/reboot/) and element selectors to apply the general style described in the [styles](https://design.inmarsat.com/styles) section of the Design System.
+The stylesheet should immediately take effect, as we use bootstrap's [reboot](https://getbootstrap.com/docs/4.0/content/reboot/) utility, plus our own element selectors to apply the style described in the [styles](https://design.inmarsat.com/styles) section of the Design System.
 
 ### Components
 
