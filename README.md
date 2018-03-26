@@ -6,7 +6,7 @@ All you should need to get started building web apps based on the [Inmarsat Desi
 
 This repo is intended to be as simple and framework agnostic as possible.
 
-You will need to be confident with HTML and CSS. We use the [BEM](http://getbem.com/) methodology for styling components, as it is one of the simplest well known methodologies that keeping css maintainable in large projects. Experience with bootstrap is beneficial but not necessary.
+You will need to be confident with HTML and CSS. We use the [BEM](http://getbem.com/) methodology for styling components, as it is one of the simplest, well known methodologies that keep css maintainable on large projects.
 
 ## Getting started
 
@@ -16,11 +16,11 @@ Include the `inm-styles.min.css` file in the head of your project. If you want t
 
 ### Global styles
 
-The stylesheet should immediately take effect as we use bootstrap's [reboot](https://getbootstrap.com/docs/4.0/content/reboot/) and element selectors to apply the general style described in the [styles](#design-system/styles) section of the Design System.
+The stylesheet should immediately take effect as we use bootstrap's [reboot](https://getbootstrap.com/docs/4.0/content/reboot/) and element selectors to apply the general style described in the [styles](https://design.inmarsat.com/styles) section of the Design System.
 
 ### Components
 
-Example markup is provided for each design system [component](#design-system/components) in the `html-samples/` directory of this project.
+Example markup is provided for each design system [component](https://design.inmarsat.com/components) in the `html-samples/` directory of this project.
 Copy and paste any of these into your site as a starting point and they will be styled by `inm-styles.min.css`.
 
 ### Assets
