@@ -10,7 +10,7 @@ You will need to be confident with HTML and CSS. We use the [BEM](http://getbem.
 
 ## Getting started
 
-Download the latest [release](https://github.com/Inmarsat-Design/developer-pack/releases) of this project.
+Download the relevent release of this project.
 
 Include the `inm-styles.min.css` file in the head of your project. If you want to use the provided font, make sure it remains in the correct path relative to the css file.
 
@@ -25,7 +25,7 @@ Copy and paste any of these into your site as a starting point and they will be 
 
 ### Assets
 
-Logos, fonts and some icons that we have used in our examples are provided as assets in this project. And any new assets should follow the guidelines set out in the design system. More designer assets assets are available in the [imagery](https://github.com/Inmarsat-Design/imagery) and (sketch-file)[https://github.com/Inmarsat-Design/sketch-file] repos.
+Fonts and some icons/logos that we have used in our examples are provided as assets in this project. For more designer assets and info on how to contribute, visit the [imagery](https://github.com/Inmarsat-Design/imagery) and [sketch-file](https://github.com/Inmarsat-Design/sketch-file) repos.
 
 ## Licensing
 
