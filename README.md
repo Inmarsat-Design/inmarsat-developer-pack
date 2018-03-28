@@ -25,7 +25,7 @@ Copy and paste any of these into your site as a starting point and they will be 
 
 ### Assets
 
-Logos, fonts and some icons that we have used in our examples are provided as assets in this project. And any new assets should follow the style guidelines set out in the design system.
+Logos, fonts and some icons that we have used in our examples are provided as assets in this project. And any new assets should follow the guidelines set out in the design system. More designer assets assets are available in the [imagery](https://github.com/Inmarsat-Design/imagery) and (sketch-file)[https://github.com/Inmarsat-Design/sketch-file] repos.
 
 ## Licensing
 
