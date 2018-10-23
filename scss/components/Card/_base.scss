@@ -1,0 +1,60 @@
+// 16:9 ratio for images
+$card-width: 480px;
+$height: $card-width/1.778;
+
+// todo: put this into its own component
+.inm-cards-wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -($gutter-width/2);
+}
+
+.inm-cards-wrapper__card {
+  display: inline-block;
+  margin: $gutter-width/2;
+}
+
+.inm-card {
+  background-color: $white;
+  border-radius: $border-radius;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: left;
+  width: $card-width;
+
+  &:hover {
+    box-shadow: $box-shadow;
+    opacity: 0.85;
+  }
+
+  &__subheading {
+    @include uppercase-style();
+    color: $mid-blue;
+    margin-bottom: 8px;
+  }
+
+  &__image > img {
+    margin: auto;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    margin: 0;
+    margin-right: 1rem;
+  }
+
+  &__content {
+    padding: 32px;
+
+    > p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.inm-link {
+  color: $mid-blue;
+  text-decoration: underline;
+}
+
+.inm-link--chevron {
+  color: $dark-blue;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  white-space: nowrap;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::after {
+    @include chevron($mid-blue);
+  }
+}
+
+// state modifiers
+.inm-link {
+  &:hover,
+  &--force-hover {
+    color: #077db1;
+  }
+
+  &:disabled,
+  &--force-disabled {
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.inm-link--white {
+  color: $white;
+
+  &:hover,
+  &--force-hover {
+    color: #eff4f7;
+  }
+}

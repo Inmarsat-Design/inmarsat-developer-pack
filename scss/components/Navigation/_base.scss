@@ -1,0 +1,42 @@
+.inm-side-nav {
+  background-color: $white;
+  max-width: 18rem;
+  padding-bottom: 2.5rem;
+  text-align: left;
+
+  &__logo {
+    margin: 48px;
+    margin-bottom: 80px;
+    max-width: 100%;
+    width: 5rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    @include uppercase-style;
+    border-left: 8px solid transparent;
+    color: $mid-blue-grey;
+    display: block;
+    font-size: 12px;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover,
+    &--active {
+      background-color: $light-grey;
+      color: $mid-blue;
+      text-decoration: none;
+    }
+
+    &--active {
+      border-color: $mid-blue;
+    }
+  }
+}

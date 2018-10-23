@@ -1,0 +1,187 @@
+@mixin height($height) {
+  border-radius: $height/2;
+  height: $height;
+}
+
+.inm-button {
+  @include height(56px);
+  align-items: center;
+  background-color: $dark-blue;
+  border: 1px solid transparent;
+  color: $white;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0.5rem 1rem;
+  padding: 0 2rem;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #033c6f;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.inm-button--pos-left {
+  margin-left: 0;
+}
+
+.inm-button--secondary {
+  background-color: transparent;
+  border-color: $dark-blue;
+  color: $dark-blue;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #033c6f;
+    color: #033c6f;
+  }
+
+  &.inm-button--chevron::after {
+    border-color: $mid-blue;
+  }
+
+  // todo: use icon fonts
+  .inm-button__icon {
+    &,
+    g {
+      fill: $mid-blue;
+    }
+  }
+}
+
+.inm-button--small {
+  @include height(40px);
+  line-height: 14px;
+}
+
+.inm-button--chevron {
+  padding-right: 1.5rem;
+
+  &::after {
+    @include chevron();
+  }
+}
+
+.inm-button--icon-left,
+.inm-button--icon-right {
+  .inm-button__icon {
+    max-height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.inm-button--icon-left {
+  padding-left: 3.75rem;
+
+  .inm-button__icon {
+    left: 1.5rem;
+  }
+}
+
+.inm-button--icon-right {
+  padding-right: 3.75rem;
+
+  .inm-button__icon {
+    right: 1.5rem;
+  }
+}
+
+// button colors:
+
+.inm-button--dark-blue {
+  background-color: $dark-blue;
+
+  &.inm-button--chevron::after {
+    border-color: $mid-blue;
+  }
+
+  &.inm-button__icon {
+    &,
+    g {
+      fill: $mid-blue;
+    }
+  }
+}
+
+.inm-button--mid-blue {
+  background-color: $mid-blue;
+
+  &.inm-button--chevron::after {
+    border-color: $white;
+  }
+
+  &.inm-button__icon {
+    &,
+    g {
+      fill: $white;
+    }
+  }
+
+  &:hover {
+    background-color: #007eb1;
+  }
+}
+
+.inm-button--dark-green {
+  background-color: $dark-green;
+
+  &.inm-button--chevron::after {
+    border-color: $white;
+  }
+
+  &:hover {
+    background-color: #0a8006;
+  }
+}
+
+.inm-button--white {
+  background-color: $white;
+
+  &,
+  &:hover {
+    color: $dark-blue;
+  }
+
+  &.inm-button--chevron::after {
+    border-color: $mid-blue;
+  }
+
+  .inm-button__icon {
+    &,
+    g {
+      fill: $mid-blue;
+    }
+  }
+
+  &:hover {
+    background-color: #eff4f7;
+  }
+}
+
+// todo: consider changing these to button--secondary-mid-blue or button-secondary--mid-blue
+.inm-button--secondary--mid-blue {
+  border-color: $mid-blue;
+  color: $mid-blue;
+
+  &:hover {
+    border-color: #007db1;
+    color: #007db1;
+  }
+}
+
+.inm-button--secondary--white {
+  border-color: $white;
+  color: $white;
+
+  &:hover {
+    border-color: #eff4f7;
+    color: #eff4f7;
+  }
+}

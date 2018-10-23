@@ -1,0 +1,132 @@
+// == Media Query Gen
+@import './bootstrap';
+
+@mixin lg-mobile {
+  @include media-breakpoint-up(sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}
+
+@mixin lg-desktop {
+  @include media-breakpoint-up(xl) {
+    @content;
+  }
+}
+
+@mixin input-field($bg:'light') {
+  @if $bg == 'light' {
+    align-items: center;
+    appearance: none;
+    background-color: $white;
+    border: 1px solid $light-grey;
+    border-radius: $border-radius-small;
+    display: flex;
+    font-size: 0.75rem;
+    height: 3rem;
+    max-width: 100%;
+    outline: none;
+    padding: 0.5rem 1rem;
+    width: 304px;
+
+    &,
+    &::placeholder {
+      color: $mid-grey;
+    }
+    @content;
+  } @else {
+    background-color: $dark-blue;
+    border: 1px solid $dark-blue-grey;
+
+    &,
+    &::placeholder {
+      color: $white;
+    }
+    @content;
+  }
+}
+
+@mixin uppercase-style {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+@mixin close-button {
+  cursor: pointer;
+  margin: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin chevron($color: $white, $direction:'forward') {
+  border: 1.5px solid $color;
+  content: '';
+  display: inline-block;
+  height: 0.5rem;
+  transform: rotate(-45deg);
+  width: 0.5rem;
+
+  @if $direction == 'backward' {
+    border-bottom-style: none;
+    border-right-style: none;
+    margin-right: 1rem;
+  } @else {
+    border-left-style: none;
+    border-top-style: none;
+    margin-left: 1rem;
+  }
+}
+
+@mixin tick-box() {
+  background-color: $white;
+  border: $border-light-grey;
+  content: '';
+  display: inline-block;
+  height: $tick-box-height;
+  overflow: hidden;
+  width: $tick-box-height;
+}
+
+// todo: turn this into a %shared style instead
+@mixin box-input($box-placing: 'before') {
+  display: block;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+
+  &--inline {
+    display: inline-block;
+    margin-right: 2.5rem;
+
+    & + & {
+      margin-right: 1rem;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__label {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    margin-bottom: 0;
+    position: relative;
+  }
+}

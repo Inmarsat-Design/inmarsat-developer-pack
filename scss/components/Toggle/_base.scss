@@ -1,0 +1,64 @@
+.inm-toggle {
+  display: inline-block;
+  margin: 0 4rem 1rem 0;
+  text-align: left;
+
+  &__off-tag,
+  &__on-tag {
+    display: inline-block;
+  }
+
+  &__input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__label {
+    color: $mid-grey;
+    cursor: pointer;
+    display: inline-flex;
+  }
+
+  &__slider {
+    background-color: $light-grey;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 1.5rem;
+    margin: 0 1rem;
+    position: relative;
+    transition: background-color 0.25s ease-out;
+    width: 3rem;
+
+    &::after {
+      background-color: $white;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: left 0.25s ease-out;
+      width: 50%;
+    }
+  }
+
+  &__input:checked + &__slider {
+    background-color: $mid-blue;
+
+    &::after {
+      left: 50%;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+
+    .inm-toggle__label {
+      cursor: auto;
+    }
+  }
+
+}

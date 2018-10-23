@@ -1,0 +1,47 @@
+/* Colors */
+$white: #fff;
+// primary
+$dark-blue: #002b52;
+$mid-blue: #189cce;
+$dark-green: #1da119;
+// secondary
+$dark-blue-grey: #335669;
+$mid-blue-grey: #527a91;
+$light-blue-grey: #b7c7d1;
+// greys
+$dark-grey: #272727;
+$mid-grey: #6f6f6f;
+$light-grey: #d8e0e5;
+$white-grey: #eff4f7;
+// TODO: ask matt about this color:
+// $light-grey: #d8e0e5;
+
+// others
+$light-blue: #00b9ff;
+$mid-green: #84bd00;
+$dark-green: #1da119;
+$light-purple: #939;
+$light-orange: #f90;
+$yellow: #fc0;
+$red: #d40000;
+
+$error: $red;
+$success: $dark-green;
+$warning: $light-orange;
+
+$font-size-small: 14px;
+$font-size-tiny: 12px;
+
+$gutter-width: 24px;
+
+$border-radius: 0.5rem;
+$border-radius-small: 0.25rem;
+$border-light-grey: 2px solid $white-grey;
+$border-blue-grey: 2px solid #355572;
+$box-shadow: 0 0 1rem 0 rgba(#000, 0.15);
+
+$navbar-height: 96px;
+$content-side-margin-base: 24px;
+$content-side-margin-tablet: 48px;
+
+$tick-box-height: 1.5rem;

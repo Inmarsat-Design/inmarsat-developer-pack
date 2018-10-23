@@ -1,0 +1,20 @@
+@include tablet {
+  .inm-pagination {
+    &__listitem {
+      display: inline-block;
+    }
+
+    &__first-page-link {
+      display: none;
+    }
+
+    &__pagelink::before {
+      display: none;
+    }
+
+    &__navlink {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

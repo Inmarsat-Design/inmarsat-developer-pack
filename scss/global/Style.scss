@@ -1,0 +1,14 @@
+// setup files
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+// bootstrap setup + utils
+@import './bootstrap';
+// bootstrap css files
+@import 'bootstrap/scss/bootstrap-reboot';
+@import 'bootstrap/scss/bootstrap-grid';
+
+// general site css
+@import './layout';
+@import './typography';

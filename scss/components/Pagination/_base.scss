@@ -1,0 +1,83 @@
+.inm-pagination {
+  font-size: 14px;
+
+  &__list {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+  }
+
+  &__listitem {
+    display: none;
+    margin: 0 0.5rem;
+  }
+
+  &__navlink,
+  &__pagelink {
+    color: $dark-blue;
+    font-weight: 300;
+    padding: 0.5rem;
+
+    .inm-pagination--onbg-dark & {
+      color: $white;
+    }
+  }
+
+  &__first-page-link {
+    span {
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 0;
+    }
+
+    &::before {
+      @include chevron($mid-blue, 'backward');
+      margin-right: 0;
+    }
+
+    &::after {
+      @include chevron($mid-blue, 'backward');
+      margin-right: 2rem;
+    }
+  }
+
+  &__navlink {
+    font-weight: 600;
+    white-space: nowrap;
+
+    &--next {
+      padding-left: 2rem;
+    }
+
+    &--prev {
+      padding-right: 2rem;
+    }
+
+    &--next::after {
+      @include chevron($mid-blue);
+    }
+
+    &--prev::before {
+      @include chevron($mid-blue, 'backward');
+    }
+  }
+
+  &__pagelink {
+    color: $dark-blue;
+  }
+
+  &__listitem--active {
+    display: inline-block;
+
+    .inm-pagination__pagelink {
+      display: inline-block;
+      font-weight: 400;
+    }
+
+    .inm-pagination__pagelink::before {
+      content: 'Page: ';
+    }
+  }
+}

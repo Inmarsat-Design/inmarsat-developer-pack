@@ -1,0 +1,81 @@
+.inm-textinput {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  max-width: 100%;
+  text-align: left;
+
+  &__wrapper {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+  }
+
+  &__input {
+    @include input-field;
+    background-color: transparent;
+
+    &--area {
+      height: 152px;
+      width: 464px;
+    }
+
+    &:focus {
+      background-color: $white;
+    }
+
+    .inm-textinput--with-icon & {
+      padding-right: 3rem; //for dropdown icon
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &,
+    g {
+      fill: $mid-grey;
+    }
+  }
+
+  &__error {
+    @include input-field;
+    border-width: 0;
+    box-shadow: $box-shadow;
+    margin-top: 0.5rem;
+    padding-left: 3rem;
+    position: relative;
+    width: 100%;
+
+    &,
+    &::placeholder {
+      color: $error;
+    }
+
+    &-icon {
+      height: 1rem;
+      left: 1rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1rem;
+    }
+  }
+
+  &--bg-dark &__input {
+    @include input-field('dark');
+
+    &:focus {
+      background-color: darken($dark-blue, 2.5%);
+    }
+  }
+
+  &--error &__input {
+    border-color: $error;
+  }
+}

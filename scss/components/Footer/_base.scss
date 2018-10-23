@@ -1,0 +1,38 @@
+.inm-footer {
+  background-color: $dark-blue;
+  font-weight: 300;
+  padding: 3rem 1.5rem;
+  text-align: left;
+  width: 100%;
+
+  &,
+  &__text {
+    color: $white;
+  }
+
+  &__main {
+    @include make-row();
+    padding-bottom: 3rem;
+  }
+
+  &__main-links {
+    @include make-col-ready();
+    @include make-col(6);
+    margin-bottom: 2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__ctas {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+
+  &__bottom {
+    border-top: 2px solid rgba($mid-blue-grey, 0.2);
+    font-size: 0.9em;
+    padding-top: 2rem;
+  }
+}

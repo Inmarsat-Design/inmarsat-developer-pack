@@ -1,0 +1,36 @@
+.inm-dropdown {
+  display: inline-block;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  position: relative;
+
+  &__select {
+    @include input-field {
+      cursor: pointer;
+      padding-right: 3rem; //for dropdown icon
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &::after {
+    border: 1px solid $mid-blue;
+    border-right-style: none;
+    border-top-style: none;
+    content: '';
+    display: block;
+    height: 0.35rem;
+    margin-left: 1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 0.35rem;
+  }
+
+  &--bg-dark &__select {
+    @include input-field('dark');
+  }
+}

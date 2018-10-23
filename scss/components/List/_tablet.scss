@@ -1,0 +1,18 @@
+@include tablet {
+  .inm-list-item {
+    padding: 1.5rem 2rem 2rem;
+
+    &__copy {
+      margin-bottom: 1.5rem;
+    }
+
+    &__image-wrapper {
+      margin-right: 2rem;
+    }
+
+    &__image {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}

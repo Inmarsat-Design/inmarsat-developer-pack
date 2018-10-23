@@ -1,0 +1,26 @@
+
+/* Bootstrap overrides */
+/* stylelint-disable */
+$font-family-base:        open_sans, Helvetica;
+$font-size-base:          1rem; //16px
+$font-weight-base:        normal;
+$line-height-base:        1.75; //rems
+$body-color:              $dark-blue;
+$link-color:              $mid-blue;
+$link-hover-color:        $link-color;
+$body-bg:                 $white;
+$headings-margin-bottom:  1rem;
+$grid-columns:            12;
+$grid-gutter-width:       $gutter-width;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+/* stylelint-enable */
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';

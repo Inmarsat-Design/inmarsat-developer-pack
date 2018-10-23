@@ -1,0 +1,189 @@
+html,
+body,
+.inm-body {
+  font-family: open_sans, Helvetica;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h1,
+.inm-h1-style {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 48px;
+}
+
+h2,
+.inm-h2-style {
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+}
+
+h3,
+.inm-h3-style {
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 34px;
+}
+
+h4,
+.inm-h4-style {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 32px;
+}
+
+h5,
+.inm-h5-style {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+h6,
+.inm-h6-style {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.inm-subheading {
+  @include uppercase-style;
+  display: block;
+  font-weight: 800;
+  line-height: 18px;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: $mid-grey;
+}
+
+small,
+.inm-small-text {
+  font-size: $font-size-small;
+  line-height: 24px;
+}
+
+.inm-small-text--semibold {
+  font-weight: 600;
+}
+
+.inm-tiny-text {
+  font-size: $font-size-tiny;
+  line-height: 20px;
+}
+
+a,
+a:hover,
+.inm-a {
+  color: $mid-blue;
+}
+
+.inm-link-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+
+  &__a {
+    text-decoration: underline;
+  }
+}
+
+.inm-plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inm-dashed-list {
+  line-height: 2rem;
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    &::before {
+      content: '\2013';
+      margin-right: 1rem;
+    }
+  }
+}
+
+.inm-dark-blue-text {
+  color: $dark-blue;
+}
+
+.inm-mid-blue-text {
+  color: $mid-blue;
+}
+
+.inm-dark-grey-text {
+  color: $dark-grey;
+}
+
+.inm-mid-grey-text {
+  color: $mid-grey;
+}
+
+.inm-white-text {
+  color: $white;
+}
+
+.inm-status-text {
+  &::before {
+    content: '\25CF';
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  &--status-red::before {
+    color: $red;
+  }
+
+  &--status-green::before {
+    color: $dark-green;
+  }
+
+  &--status-orange::before {
+    color: $light-orange;
+  }
+}
+
+@include desktop {
+  h1,
+  .inm-h1-style {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  h2,
+  .inm-h2-style {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h3,
+  .inm-h3-style {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h4,
+  .inm-h4-style {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h5,
+  .inm-h5-style {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  h6,
+  .inm-h6-style {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

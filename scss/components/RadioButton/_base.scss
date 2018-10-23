@@ -1,0 +1,24 @@
+.inm-radio {
+  $fill-circle: $tick-box-height/3;
+  @include box-input();
+
+  &__label::before {
+    @include tick-box();
+    border-radius: $tick-box-height/2;
+    margin-right: 1rem;
+  }
+
+  &__input:checked + &__label::after {
+    background-color: $light-blue;
+    border-radius: $tick-box-height/2;
+    color: $error;
+    content: '';
+    display: block;
+    height: $fill-circle;
+    left: $fill-circle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $fill-circle;
+  }
+}

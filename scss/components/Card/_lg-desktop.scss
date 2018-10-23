@@ -1,0 +1,16 @@
+@include lg-desktop {
+  .inm-card--wide {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: ($card-width*2)+$gutter-width;
+
+    .inm-card__image {
+      flex: 0 0 $card-width;
+    }
+
+    .inm-card__content {
+      max-height: $height;
+      overflow: auto;
+    }
+  }
+}

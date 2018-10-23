@@ -1,0 +1,62 @@
+.inm-list {
+  margin: 0;
+  padding: 0;
+}
+
+.inm-list-item {
+  background-color: $white;
+  border-radius: $border-radius;
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow;
+    opacity: 0.85;
+  }
+
+  &__image-wrapper {
+    margin-right: 1rem;
+  }
+
+  &__image {
+    height: 1.5rem;
+    margin-top: 0.25rem; //to give impression of alignement with title text
+    width: 1.5rem;
+
+    > * {
+      fill: $dark-blue;
+    }
+  }
+
+  &__content {
+    min-width: 0; //for flex
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__meta {
+    color: $mid-grey;
+    font-size: $font-size-tiny;
+    margin-bottom: 1rem;
+  }
+
+  &__copy {
+    color: $dark-grey;
+    font-size: $font-size-small;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 600px;
+  }
+
+  &__cta {
+    margin: 0 1rem 0 0;
+  }
+}

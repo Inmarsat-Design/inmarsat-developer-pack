@@ -1,0 +1,39 @@
+.inm-content {
+  display: flex;
+}
+
+.inm-content__sidebar {
+  flex: 0 0 256px;
+  padding: 80px 0;
+}
+
+.inm-content__main {
+  flex: 0 1 1400px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 80px $content-side-margin-base;
+  width: 100%;
+}
+
+.inm-section {
+  margin-bottom: 56px;
+}
+
+.inm-section__splitter {
+  margin-top: 40px;
+}
+
+.inm-section--bottom-border {
+  border-bottom: 1px solid $white-grey;
+  padding-bottom: 16px;
+}
+
+@include tablet {
+  .inm-content__main {
+    padding: 80px $content-side-margin-tablet;
+  }
+
+  .inm-content__main--indent {
+    margin-left: (256px);
+  }
+}

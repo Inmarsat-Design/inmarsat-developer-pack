@@ -1,0 +1,33 @@
+@include desktop {
+  .inm-footer {
+    padding: 5rem 2rem;
+
+    &__main-links {
+      @include make-col(3);
+    }
+
+    &__ctas {
+      @include make-col(4);
+      @include make-col-offset(2);
+    }
+
+    &__inline-bullet {
+      display: inline;
+
+      & + &::before {
+        content: '\25CF';
+        display: inline;
+        margin: 0 1rem;
+        opacity: 0.5;
+      }
+    }
+
+    &__bottom {
+      padding-top: 1rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

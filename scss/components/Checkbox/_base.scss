@@ -1,0 +1,25 @@
+.inm-checkbox {
+  @include box-input();
+
+  &__label::after {
+    @include tick-box();
+    border-radius: 1px;
+    margin-left: 1.5rem;
+  }
+
+  &__input:checked + &__label::before {
+    border-color: $light-blue;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    content: '';
+    display: block;
+    height: 1rem;
+    position: absolute;
+    right: 0.85rem;
+    top: 0.5rem;
+    transform: translateY(-50%) rotateZ(45deg);
+    transform-origin: bottom;
+    width: 0.5rem;
+  }
+}

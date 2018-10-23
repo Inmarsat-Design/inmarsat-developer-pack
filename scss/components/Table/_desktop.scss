@@ -1,0 +1,42 @@
+@include desktop {
+  .inm-table {
+    &__table {
+      display: table;
+    }
+
+    &__headergroup {
+      display: table-header-group;
+    }
+
+    &__body {
+      display: table-row-group;
+    }
+
+    &__row {
+      display: table-row;
+    }
+
+    &__header {
+      border-bottom: $border-light-grey;
+      display: table-cell;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 1rem 0;
+    }
+
+    &__cell {
+      display: table-cell;
+      padding: 1rem 0;
+      width: auto;
+
+      & + &::before {
+        display: none;
+      }
+    }
+
+    &__cell {
+      font-size: 1em;
+      vertical-align: top;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+$icon-size: 1.5rem;
+
+.inm-progress-bar {
+  display: inline-block;
+  margin: 2rem;
+
+  &__title {
+    color: $mid-blue;
+    margin-bottom: 2rem;
+  }
+
+  &__bar {
+    appearance: none;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+  }
+
+  &__indicator {
+    align-items: center;
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+  }
+
+  &__stage {
+    align-items: center;
+    display: inline-flex;
+    height: $icon-size;
+    overflow: visible;
+    position: relative;
+
+    &::before {
+      border-top: 2px solid $light-grey;
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 3rem;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+  }
+
+  &__active-icon,
+  &__inactive-icon {
+    height: $icon-size;
+    width: $icon-size;
+  }
+
+  &__active-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  &__stage--active {
+    &::before {
+      border-color: $mid-blue;
+    }
+
+    .inm-progress-bar__active-icon {
+      visibility: visible;
+      z-index: 2;
+    }
+
+    .inm-progress-bar__inactive-icon {
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.inm-table {
+  background-color: $white;
+  border-radius: $border-radius;
+  padding: 0 2rem 1rem;
+  text-align: left;
+
+  &__table {
+    display: flex;
+    width: 100%;
+  }
+
+  &__headergroup {
+    display: none;
+  }
+
+  &__table,
+  &__body,
+  &__row,
+  &__cell {
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      border-bottom: $border-light-grey;
+    }
+  }
+
+  &__cell {
+    color: $mid-grey;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 0.25rem 0;
+    width: 100%;
+  }
+
+  &__cell--text-blue-grey {
+    color: $mid-blue-grey;
+  }
+
+  &__cell--text-dark-blue {
+    color: $dark-blue;
+  }
+
+  &__cell--mobile-pos-inline {
+    width: auto;
+
+    & + &::before {
+      content: '\25CF';
+      display: inline;
+      margin: 0 1rem;
+      opacity: 0.5;
+    }
+  }
+
+  &__cell--mobile-pos-top {
+    order: -1;
+  }
+}
