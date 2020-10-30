@@ -1,6 +1,8 @@
+$ball: 20px;
+
 .inm-toggle {
   display: inline-block;
-  margin: 0 4rem 1rem 0;
+  margin: 0 4rem 2rem 0;
   text-align: left;
 
   &__off-tag,
@@ -14,42 +16,43 @@
   }
 
   &__label {
-    color: $mid-grey;
     cursor: pointer;
     display: inline-flex;
+    line-height: 24px;
+    margin: 0;
   }
 
   &__slider {
-    background-color: $light-grey;
+    background-color: $grey-25;
     border: 2px solid transparent;
     border-radius: 1rem;
     box-sizing: content-box;
     display: inline-block;
-    height: 1.5rem;
+    height: 20px;
     margin: 0 1rem;
     position: relative;
     transition: background-color 0.25s ease-out;
-    width: 3rem;
+    width: 44px;
 
     &::after {
       background-color: $white;
       border-radius: 50%;
       content: '';
       display: inline-block;
-      height: 100%;
+      height: 20px;
       left: 0;
       position: absolute;
       top: 0;
       transition: left 0.25s ease-out;
-      width: 50%;
+      width: 20px;
     }
   }
 
   &__input:checked + &__slider {
-    background-color: $mid-blue;
+    background-color: $grey-100;
 
     &::after {
-      left: 50%;
+      left: calc(100% - 20px);
     }
   }
 
@@ -60,5 +63,4 @@
       cursor: auto;
     }
   }
-
 }

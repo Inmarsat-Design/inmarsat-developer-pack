@@ -1,5 +1,8 @@
 .inm-pagination {
+  align-items: center;
+  display: flex;
   font-size: 14px;
+  justify-content: center;
 
   &__list {
     display: inline-block;
@@ -15,32 +18,10 @@
 
   &__navlink,
   &__pagelink {
-    color: $dark-blue;
+    color: $black;
     font-weight: 300;
     padding: 0.5rem;
-
-    .inm-pagination--onbg-dark & {
-      color: $white;
-    }
-  }
-
-  &__first-page-link {
-    span {
-      height: 0;
-      overflow: hidden;
-      position: absolute;
-      width: 0;
-    }
-
-    &::before {
-      @include chevron($mid-blue, 'backward');
-      margin-right: 0;
-    }
-
-    &::after {
-      @include chevron($mid-blue, 'backward');
-      margin-right: 2rem;
-    }
+    text-decoration: none;
   }
 
   &__navlink {
@@ -56,16 +37,16 @@
     }
 
     &--next::after {
-      @include chevron($mid-blue);
+      @include chevron($black);
     }
 
     &--prev::before {
-      @include chevron($mid-blue, 'backward');
+      @include chevron($black, 'backward');
     }
   }
 
   &__pagelink {
-    color: $dark-blue;
+    color: $black;
   }
 
   &__listitem--active {
@@ -73,11 +54,75 @@
 
     .inm-pagination__pagelink {
       display: inline-block;
-      font-weight: 400;
     }
 
     .inm-pagination__pagelink::before {
       content: 'Page: ';
+    }
+  }
+
+  &__more {
+    color: $grey-50;
+  }
+
+  &__first-page-link,
+  &__last-page-link {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__last-page-link {
+    margin-left: 1.5rem;
+  }
+
+  &__first-page-link {
+    margin-right: 0.5rem;
+
+    span {
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 0;
+    }
+
+    &::before {
+      @include chevron($black, 'backward');
+      margin-right: 0;
+    }
+
+    &::after {
+      @include chevron($black, 'backward');
+      margin-right: 0;
+    }
+  }
+
+  &__last-page-link {
+    display: none;
+  }
+
+  &--onbg-dark {
+    .inm-pagination__first-page-link,
+    .inm-pagination__last-page-link,
+    .inm-pagination__navlink--prev,
+    .inm-pagination__navlink--next,
+    .inm-pagination__pagelink {
+      color: $white;
+    }
+
+    &__more {
+      color: $grey-25;
+    }
+
+    .inm-pagination__first-page-link {
+      &::before,
+      &::after {
+        border-color: $white;
+      }
+    }
+
+    .inm-pagination__navlink--next::after,
+    .inm-pagination__navlink--prev::before {
+      border-color: $white;
     }
   }
 }

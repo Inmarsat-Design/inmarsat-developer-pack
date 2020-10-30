@@ -1,9 +1,0 @@
-@include tablet {
-  .inm-overlay {
-    &:not(&--ignore-bp-tablet) > &__wrapper {
-      border-radius: $border-radius;
-      height: auto;
-      width: 408px;
-    }
-  }
-}

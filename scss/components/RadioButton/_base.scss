@@ -9,7 +9,7 @@
   }
 
   &__input:checked + &__label::after {
-    background-color: $light-blue;
+    background-color: $grey-100;
     border-radius: $tick-box-height/2;
     color: $error;
     content: '';

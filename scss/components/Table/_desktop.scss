@@ -17,26 +17,32 @@
     }
 
     &__header {
-      border-bottom: $border-light-grey;
+      border-bottom: $border-mid-grey;
       display: table-cell;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
       padding: 1rem 0;
+
+      &--chevron::after {
+        @include chevron(currentColor, 'down');
+        border-width: 2px;
+        height: 6px;
+        margin-left: 1em;
+        width: 6px;
+      }
     }
 
     &__cell {
       display: table-cell;
+      font-size: 14px;
       padding: 1rem 0;
+      vertical-align: top;
       width: auto;
 
       & + &::before {
         display: none;
       }
-    }
-
-    &__cell {
-      font-size: 1em;
-      vertical-align: top;
     }
   }
 }

@@ -1,8 +1,14 @@
 .inm-dropdown {
+  color: $black;
   display: inline-block;
   margin-bottom: 1rem;
   max-width: 100%;
   position: relative;
+  text-align: left;
+
+  &__label {
+    margin-bottom: 1rem;
+  }
 
   &__select {
     @include input-field {
@@ -16,21 +22,17 @@
   }
 
   &::after {
-    border: 1px solid $mid-blue;
-    border-right-style: none;
-    border-top-style: none;
-    content: '';
-    display: block;
-    height: 0.35rem;
-    margin-left: 1rem;
+    @include chevron(currentColor, 'down');
+    bottom: 1.2rem;
     position: absolute;
     right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-    width: 0.35rem;
   }
 
-  &--bg-dark &__select {
-    @include input-field('dark');
+  &--bg-dark {
+    color: $white;
+
+    .inm-dropdown__select {
+      @include input-field('dark');
+    }
   }
 }

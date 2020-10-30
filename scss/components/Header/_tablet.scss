@@ -1,5 +1,9 @@
 @include tablet {
   .inm-header {
-    padding: 120px 32px 40px;
+    padding: 7.5rem 2rem 2rem;
+
+    &__subheading {
+      margin-bottom: 0.25rem;
+    }
   }
 }

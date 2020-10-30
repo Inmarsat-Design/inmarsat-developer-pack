@@ -2,7 +2,7 @@
   .inm-card--wide {
     display: inline-flex;
     flex-direction: row-reverse;
-    width: ($card-width*2)+$gutter-width;
+    width: ($card-width * 2) + $gutter-width;
 
     .inm-card__image {
       flex: 0 0 $card-width;

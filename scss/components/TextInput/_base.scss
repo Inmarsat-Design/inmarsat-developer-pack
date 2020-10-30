@@ -2,7 +2,7 @@
   display: inline-flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   max-width: 100%;
   text-align: left;
 
@@ -39,7 +39,7 @@
 
     &,
     g {
-      fill: $mid-grey;
+      fill: currentColor;
     }
   }
 
@@ -67,15 +67,15 @@
     }
   }
 
+  &--error &__input {
+    border-color: $error;
+  }
+
   &--bg-dark &__input {
     @include input-field('dark');
 
     &:focus {
-      background-color: darken($dark-blue, 2.5%);
+      background-color: $grey-100;
     }
-  }
-
-  &--error &__input {
-    border-color: $error;
   }
 }

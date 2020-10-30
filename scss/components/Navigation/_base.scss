@@ -5,8 +5,8 @@
   text-align: left;
 
   &__logo {
-    margin: 48px;
-    margin-bottom: 80px;
+    height: 27px;
+    margin: 2rem;
     max-width: 100%;
     width: 5rem;
   }
@@ -15,28 +15,77 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    > li {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__link {
-    @include uppercase-style;
-    border-left: 8px solid transparent;
-    color: $mid-blue-grey;
+    border-left: 4px solid transparent;
+    color: $black;
     display: block;
-    font-size: 12px;
-    padding: 16px 40px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0.5rem 2rem 0.5rem 1.75rem;
     text-decoration: none;
-    text-transform: uppercase;
     width: 100%;
 
     &:hover,
     &--active {
-      background-color: $light-grey;
-      color: $mid-blue;
+      background-color: $grey-0;
+      color: $black;
       text-decoration: none;
     }
 
     &--active {
-      border-color: $mid-blue;
+      border-color: $pink;
+    }
+  }
+
+  &__sub-level {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0.375rem 0 0.75rem;
+
+    &--active {
+      display: block;
+      order: 1;
+    }
+
+    &-link {
+      color: $grey-100;
+      display: block;
+      font-size: 12px;
+      line-height: 20px;
+      padding: 0.375rem 2rem 0.375rem 3.25rem;
+      text-decoration: none;
+      width: 100%;
+
+      &:hover,
+      &--active {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+
+    + .inm-side-nav__link {
+      position: relative;
+
+      &::after {
+        @include chevron($black, 'down');
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+      }
+    }
+
+    &--active + .inm-side-nav__link {
+      &::after {
+        @include chevron($black, 'up');
+      }
     }
   }
 }

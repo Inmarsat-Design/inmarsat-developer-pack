@@ -1,24 +1,30 @@
 .inm-footer {
-  background-color: $dark-blue;
+  background-color: $black;
+  font-size: 14px;
   font-weight: 300;
   padding: 3rem 1.5rem;
   text-align: left;
   width: 100%;
 
   &,
-  &__text {
+  &__text,
+  &__heading {
     color: $white;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
   }
 
   &__main {
     @include make-row();
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
   }
 
   &__main-links {
     @include make-col-ready();
     @include make-col(6);
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 
     li {
       margin-bottom: 0.5rem;
@@ -31,8 +37,10 @@
   }
 
   &__bottom {
-    border-top: 2px solid rgba($mid-blue-grey, 0.2);
-    font-size: 0.9em;
+    border-top: 1px solid $grey-100;
+    display: flex;
+    font-size: 0.85em;
+    justify-content: space-between;
     padding-top: 2rem;
   }
 }

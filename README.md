@@ -8,11 +8,11 @@ This repo is intended to be as simple and framework agnostic as possible.
 
 You will need to be confident with HTML and CSS. We use the [BEM](http://getbem.com/) methodology for styling components, as it is one of the simplest, well known methodologies that keep css maintainable on large projects.
 
-## Getting started
+## Usage
 
-Download the relevent release of this project.
+Download the relevent [release](https://github.com/Inmarsat-Design/inmarsat-developer-pack/releases) of this project. If you are unsure which version to use, just follow the github link from the [design system](https://design.inmarsat.com/) - the most relevent version will be in the url.
 
-Include the `inm-styles.min.css` file in the head of your project. If you want to use the provided font, make sure it remains in the correct path relative to the css file.
+Include the `inm-styles.min.css` file in the head of your project.
 
 ### Styles
 
@@ -20,16 +20,24 @@ The stylesheet should immediately take effect, as we use bootstrap's [reboot](ht
 
 #### Sass
 
-The sass files are now also included if you prefer to work with them. However, currently, if you want to build the global styles from `scss/global/Style.scss` instead of using `inm-styles.min.css`, you will need set up your ecosystem so that the bootstrap imports inside `scss/global` resolve to your own _bootstrap 4_ dependency.
+The sass files are also included if you prefer to work with them. However, currently, if you want to build the global styles from `scss/global/Style.scss` instead of using `inm-styles.min.css`, you will need set up your ecosystem so that the bootstrap imports inside `scss/global` resolve to your own _bootstrap 4_ dependency.
 
 ### Components
 
 Example markup is provided for each design system [component](https://design.inmarsat.com/components) in the `html-samples/` directory of this project.
 Copy and paste any of these into your site as a starting point and they will be styled by `inm-styles.min.css`.
 
+### Fonts
+
+We use Noto Sans, which is imported from Google fonts [here](https://fonts.google.com/specimen/Noto+Sans?sidebar.open=true&selection.family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700).
+
 ### Assets
 
-Fonts and some icons/logos that we have used in our examples are provided as assets in this project. For more designer assets and info on how to contribute, visit the [imagery](https://github.com/Inmarsat-Design/imagery) and [sketch-file](https://github.com/Inmarsat-Design/sketch-file) repos.
+Some icons/logos that we have used in our examples are provided as assets in this project. For more designer assets and info on how to contribute to them, visit the [imagery](https://github.com/Inmarsat-Design/imagery) and [sketch-file](https://github.com/Inmarsat-Design/sketch-file) repos.
+
+## Contribution
+
+This developer pack is built as part of the Design System, outside of this repo. If you notice something wrong or wish to contribute, you can still [create an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue) for this repo and we can work together to get it included in the next release.
 
 ## Licensing
 

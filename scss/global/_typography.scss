@@ -1,69 +1,77 @@
 html,
 body,
 .inm-body {
-  font-family: open_sans, Helvetica;
+  font-family: $font-family-list;
   font-size: 16px;
   line-height: 28px;
 }
 
 h1,
 .inm-h1-style {
-  font-size: 40px;
-  font-weight: 200;
+  font-size: 36px;
+  font-weight: bold;
   line-height: 48px;
 }
 
 h2,
 .inm-h2-style {
-  font-size: 32px;
-  font-weight: 200;
+  font-size: 28px;
+  font-weight: bold;
   line-height: 40px;
 }
 
 h3,
 .inm-h3-style {
-  font-size: 24px;
-  font-weight: 200;
-  line-height: 34px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 36px;
 }
 
 h4,
 .inm-h4-style {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: bold;
   line-height: 32px;
 }
 
 h5,
 .inm-h5-style {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 32px;
 }
 
 h6,
 .inm-h6-style {
   font-size: 16px;
-  font-weight: 600;
-  line-height: 32px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.inm-label {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  margin-bottom: 1rem;
 }
 
 .inm-subheading {
   @include uppercase-style;
+  color: $black;
   display: block;
   font-weight: 800;
   line-height: 18px;
-  margin-bottom: 1rem;
-}
-
-p {
-  color: $mid-grey;
+  margin-bottom: 0.5rem;
 }
 
 small,
 .inm-small-text {
   font-size: $font-size-small;
   line-height: 24px;
+}
+
+.inm-small-text--bold {
+  font-weight: bold;
 }
 
 .inm-small-text--semibold {
@@ -73,12 +81,17 @@ small,
 .inm-tiny-text {
   font-size: $font-size-tiny;
   line-height: 20px;
+
+  &--bold {
+    font-weight: bold;
+  }
 }
 
 a,
 a:hover,
 .inm-a {
-  color: $mid-blue;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .inm-link-list {
@@ -110,20 +123,12 @@ a:hover,
   }
 }
 
-.inm-dark-blue-text {
-  color: $dark-blue;
+.inm-black-text {
+  color: $black;
 }
 
-.inm-mid-blue-text {
-  color: $mid-blue;
-}
-
-.inm-dark-grey-text {
-  color: $dark-grey;
-}
-
-.inm-mid-grey-text {
-  color: $mid-grey;
+.inm-grey-text {
+  color: $grey-100;
 }
 
 .inm-white-text {
@@ -134,56 +139,71 @@ a:hover,
   &::before {
     content: '\25CF';
     display: inline;
+    font-size: 1.25em;
     margin-right: 1rem;
   }
 
-  &--status-red::before {
-    color: $red;
+  &--status-error::before {
+    color: $error;
   }
 
-  &--status-green::before {
-    color: $dark-green;
+  &--status-warning::before {
+    color: $warning;
   }
 
-  &--status-orange::before {
-    color: $light-orange;
+  &--status-success::before {
+    color: $success;
+  }
+
+  &--status-waiting::before {
+    color: $waiting;
+  }
+
+  &--status-inactive::before {
+    color: $inactive;
   }
 }
 
 @include desktop {
   h1,
   .inm-h1-style {
-    font-size: 48px;
+    font-size: 42px;
+    font-weight: bold;
     line-height: 56px;
   }
 
   h2,
   .inm-h2-style {
-    font-size: 40px;
+    font-size: 36px;
+    font-weight: bold;
     line-height: 48px;
   }
 
   h3,
   .inm-h3-style {
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: bold;
     line-height: 40px;
   }
 
   h4,
   .inm-h4-style {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 36px;
   }
 
   h5,
   .inm-h5-style {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 32px;
   }
 
   h6,
   .inm-h6-style {
     font-size: 16px;
+    font-weight: bold;
     line-height: 30px;
   }
 }

@@ -3,15 +3,20 @@
 
   &__label::after {
     @include tick-box();
-    border-radius: 1px;
+    border-radius: $border-radius-small;
     margin-left: 1.5rem;
   }
 
+  &__input:checked + &__label::after {
+    background-color: $grey-100;
+    border-color: $grey-100;
+  }
+
   &__input:checked + &__label::before {
-    border-color: $light-blue;
+    border-color: $white;
     border-radius: 2px;
     border-style: solid;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     content: '';
     display: block;
     height: 1rem;

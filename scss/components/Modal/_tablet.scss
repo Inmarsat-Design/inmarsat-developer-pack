@@ -1,0 +1,9 @@
+@include tablet {
+  .inm-modal {
+    &:not(&--ignore-bp-tablet) > &__wrapper {
+      border-radius: $border-radius-small;
+      height: auto;
+      max-width: 520px;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .inm-table {
   background-color: $white;
   border-radius: $border-radius;
-  padding: 0 2rem 1rem;
+  padding: 0.5rem 1.5rem;
   text-align: left;
 
   &__table {
@@ -26,34 +26,26 @@
     padding: 1rem 0;
 
     &:not(:last-child) {
-      border-bottom: $border-light-grey;
+      border-bottom: $border-mid-grey;
     }
   }
 
   &__cell {
-    color: $mid-grey;
-    font-size: 0.9em;
-    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
     padding: 0.25rem 0;
     width: 100%;
-  }
-
-  &__cell--text-blue-grey {
-    color: $mid-blue-grey;
-  }
-
-  &__cell--text-dark-blue {
-    color: $dark-blue;
   }
 
   &__cell--mobile-pos-inline {
     width: auto;
 
     & + &::before {
+      color: $grey-25;
       content: '\25CF';
       display: inline;
-      margin: 0 1rem;
-      opacity: 0.5;
+      margin: 0 0.75em;
+      // opacity: 0.25;
     }
   }
 
