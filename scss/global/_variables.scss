@@ -1,33 +1,42 @@
 /* Colors */
-$white: #fff;
 // primary
-$dark-blue: #002b52;
-$mid-blue: #189cce;
-$dark-green: #1da119;
+$black: #000;
+$white: #fff;
+$pink: #ff3d5c;
 // secondary
-$dark-blue-grey: #335669;
-$mid-blue-grey: #527a91;
-$light-blue-grey: #b7c7d1;
-// greys
-$dark-grey: #272727;
-$mid-grey: #6f6f6f;
-$light-grey: #d8e0e5;
-$white-grey: #eff4f7;
-// TODO: ask matt about this color:
-// $light-grey: #d8e0e5;
+$navy: #103069;
+$blue-grey: #335669;
+$dark-green: #0c370c;
+$green: #095953;
+$dark-purple: #270037;
+$burgundy: #5e0037;
+// neutral
+$grey-100: #424651;
+$grey-75: #767980;
+$grey-50: #a6a8ad;
+$grey-25: #d4d4d8;
+$grey-10: #ececed;
+$grey-5: #f5f6f6;
+$grey-0: #fafbfb;
+// highlight
+$light-grey: #a0a6b2;
+$aqua: #80eeff;
+$teal: #26a7b4;
+$lime-green: #6bf108;
+$yellow: #fffa00;
+$mint-green: #00ffa1;
+$violet: #b67cea;
+// communication
+$error: #d40000;
+$warning: #f90;
+$success: #1da119;
+$waiting: #103069;
+$inactive: #767980;
+// ------
 
-// others
-$light-blue: #00b9ff;
-$mid-green: #84bd00;
-$dark-green: #1da119;
-$light-purple: #939;
-$light-orange: #f90;
-$yellow: #fc0;
-$red: #d40000;
-
-$error: $red;
-$success: $dark-green;
-$warning: $light-orange;
+$font-family-list: 'Noto Sans', Arial, sans-serif;
+$body-color: $grey-100;
+$link-color: $grey-100;
 
 $font-size-small: 14px;
 $font-size-tiny: 12px;
@@ -36,11 +45,13 @@ $gutter-width: 24px;
 
 $border-radius: 0.5rem;
 $border-radius-small: 0.25rem;
-$border-light-grey: 2px solid $white-grey;
+$border-mid-grey: 2px solid $grey-10;
+$border-light-grey: 2px solid $grey-0;
 $border-blue-grey: 2px solid #355572;
-$box-shadow: 0 0 1rem 0 rgba(#000, 0.15);
+$box-shadow: 0 0 0.4375rem 0 rgba(#000, 0.25);
 
 $navbar-height: 96px;
+$content-max-width: 1440px;
 $content-side-margin-base: 24px;
 $content-side-margin-tablet: 48px;
 

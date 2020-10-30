@@ -1,11 +1,49 @@
 @include tablet {
   .inm-pagination {
-    &__listitem {
+    &__listitem,
+    &__last-page-link {
       display: inline-block;
     }
 
     &__first-page-link {
-      display: none;
+      span {
+        height: inherit;
+        overflow: inherit;
+        position: inherit;
+        width: inherit;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__navlink--prev {
+      margin-right: 0;
+      order: -1;
+
+      &::before {
+        margin-right: 0;
+      }
+    }
+
+    &__navlink--next::after {
+      margin-left: 0;
+    }
+
+    &__navlink--next,
+    &__navlink--prev {
+      span {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+      }
+    }
+
+    &__listitem--active .inm-pagination__pagelink {
+      font-weight: 700;
     }
 
     &__pagelink::before {

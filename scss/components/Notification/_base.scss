@@ -1,4 +1,4 @@
-$notifications-gutter: 3rem;
+$notifications-gutter: 4rem;
 
 .inm-notifications-list {
   position: absolute;
@@ -14,7 +14,8 @@ $notifications-gutter: 3rem;
   display: flex;
   margin-bottom: $notifications-gutter;
   max-width: 100%;
-  padding: 1.5rem 5rem 2.5rem 1.5rem;
+  min-width: 27rem;
+  padding: 1.5rem 5rem 1.5rem 1.5rem;
   position: relative;
   text-align: left;
 
@@ -32,6 +33,7 @@ $notifications-gutter: 3rem;
 
   &__close {
     @include close-button;
+    margin: 1.75rem;
   }
 
   &__icon {

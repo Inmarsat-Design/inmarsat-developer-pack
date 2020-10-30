@@ -1,13 +1,10 @@
 $icon-size: 1.5rem;
+$progressbar-line-position: $icon-size / 2 - 0.0625rem;
 
 .inm-progress-bar {
-  display: inline-block;
-  margin: 2rem;
-
-  &__title {
-    color: $mid-blue;
-    margin-bottom: 2rem;
-  }
+  display: block;
+  margin: 0 2rem 2rem;
+  padding-top: 2rem;
 
   &__bar {
     appearance: none;
@@ -18,8 +15,9 @@ $icon-size: 1.5rem;
   }
 
   &__indicator {
-    align-items: center;
-    display: inline-flex;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     margin: 0;
     overflow: visible;
@@ -28,50 +26,131 @@ $icon-size: 1.5rem;
 
   &__stage {
     align-items: center;
-    display: inline-flex;
-    height: $icon-size;
-    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
 
+    &::after,
     &::before {
-      border-top: 2px solid $light-grey;
+      background: $grey-50;
       content: '';
-      display: inline-block;
-      height: 0;
-      width: 3rem;
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: $icon-size / 2 - 0.0625rem;
+      width: 50%;
     }
 
-    &:first-child::before {
-      display: none;
+    &::after {
+      left: 50%;
+      transform: translate($icon-size / 2, 0);
     }
+
+    &::before {
+      right: 50%;
+      transform: translate(-1 * $icon-size / 2, 0);
+    }
+  }
+
+  &__stage-icon {
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+
+  &__stage-label {
+    color: $grey-50;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__circle-active {
+    display: none;
+  }
+
+  &__circle-inactive {
+    display: block;
   }
 
   &__active-icon,
-  &__inactive-icon {
-    height: $icon-size;
-    width: $icon-size;
+  &__completed-icon {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  &__active-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    z-index: -1;
+  &__stage--active,
+  &__stage--completed {
+    .inm-progress-bar__stage-label {
+      color: $black;
+    }
+
+    .inm-progress-bar__stage-icon {
+      border-color: $black;
+    }
+
+    &.inm-progress-bar__stage-wrap::before {
+      background: $black;
+    }
+
+    .inm-progress-bar__circle-inactive {
+      display: none;
+    }
+
+    .inm-progress-bar__stage::before {
+      background-color: $black;
+    }
   }
 
   &__stage--active {
+    .inm-progress-bar__active-icon,
+    .inm-progress-bar__circle-active {
+      display: block;
+    }
+  }
+
+  &__stage--completed {
+    .inm-progress-bar__completed-icon,
+    .inm-progress-bar__circle-active {
+      display: block;
+    }
+
+    .inm-progress-bar__stage::after {
+      background-color: $black;
+    }
+  }
+
+  &__stage-wrap {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+
     &::before {
-      border-color: $mid-blue;
+      background: $grey-50;
+      content: '';
+      display: block;
+      // IE 11 does not support 0 without the unit
+      flex: 1 1 0px; /* stylelint-disable-line length-zero-no-unit */
+      height: 2px;
+      margin-top: $progressbar-line-position;
     }
 
-    .inm-progress-bar__active-icon {
-      visibility: visible;
-      z-index: 2;
+    &:first-child {
+      flex: 0 1 auto;
+
+      .inm-progress-bar__stage::before {
+        display: none;
+      }
     }
 
-    .inm-progress-bar__inactive-icon {
-      visibility: hidden;
+    &:last-child {
+      .inm-progress-bar__stage::after {
+        display: none;
+      }
     }
   }
 }

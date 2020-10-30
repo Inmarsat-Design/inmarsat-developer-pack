@@ -1,21 +1,12 @@
 .inm-link {
-  color: $mid-blue;
+  color: $grey-100;
+  font-size: 0.875rem;
   text-decoration: underline;
-}
 
-.inm-link--chevron {
-  color: $dark-blue;
-  font-weight: 600;
-  margin-right: 1.5rem;
-  white-space: nowrap;
-
-  &,
-  &:hover {
-    text-decoration: none;
-  }
-
-  &::after {
-    @include chevron($mid-blue);
+  &__icon {
+    display: inline-block;
+    margin: 0 0.5rem;
+    opacity: 0.75;
   }
 }
 
@@ -23,22 +14,114 @@
 .inm-link {
   &:hover,
   &--force-hover {
-    color: #077db1;
+    color: $black;
   }
 
   &:disabled,
   &--force-disabled {
+    color: $grey-50;
     cursor: default;
-    opacity: 0.4;
     pointer-events: none;
   }
+}
+
+.inm-link__icon {
+  .inm-link--white & {
+    opacity: 1;
+  }
+
+  .inm-link--force-hover & {
+    opacity: 1;
+  }
+
+  .inm-link--force-disabled & {
+    opacity: 0.25;
+  }
+
+  .inm-link--bold & {
+    opacity: 1;
+  }
+
+  .inm-link:hover & {
+    opacity: 1;
+  }
+
+  .inm-link:disabled & {
+    opacity: 0.25;
+  }
+}
+
+.inm-link--large {
+  font-size: 1rem;
+}
+
+.inm-link--bold {
+  color: $black;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover,
+  &.inm-link--force-hover {
+    color: $grey-100;
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.inm-link--force-disabled {
+    color: $grey-50;
+  }
+
+  &:hover .inm-link__icon {
+    opacity: 0.75;
+  }
+
+  &:disabled .inm-link__icon {
+    opacity: 0.5;
+  }
+
+  &--no-hover:hover {
+    color: $black;
+
+    .inm-link__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.inm-link--bold.inm-link--force-hover .inm-link__icon {
+  opacity: 0.75;
+}
+
+.inm-link--bold.inm-link--force-disabled .inm-link__icon {
+  opacity: 0.25;
 }
 
 .inm-link--white {
   color: $white;
 
   &:hover,
-  &--force-hover {
-    color: #eff4f7;
+  &.inm-link--force-hover {
+    color: $grey-25;
+  }
+
+  &:disabled,
+  &.inm-link--force-disabled {
+    color: $grey-75;
+  }
+
+  &.inm-link--force-hover .inm-link__icon {
+    opacity: 0.75;
+  }
+
+  &.inm-link--force-disabled .inm-link__icon {
+    opacity: 0.5;
+  }
+
+  &:hover .inm-link__icon {
+    opacity: 0.75;
+  }
+
+  &:disabled .inm-link__icon {
+    opacity: 0.5;
   }
 }

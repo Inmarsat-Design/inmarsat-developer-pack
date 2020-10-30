@@ -2,7 +2,6 @@
 $card-width: 480px;
 $height: $card-width/1.778;
 
-// todo: put this into its own component
 .inm-cards-wrapper {
   align-items: stretch;
   display: flex;
@@ -18,7 +17,7 @@ $height: $card-width/1.778;
 
 .inm-card {
   background-color: $white;
-  border-radius: $border-radius;
+  border-radius: $border-radius-small;
   max-width: 100%;
   overflow: hidden;
   text-align: left;
@@ -29,19 +28,17 @@ $height: $card-width/1.778;
     opacity: 0.85;
   }
 
-  &__subheading {
-    @include uppercase-style();
-    color: $mid-blue;
-    margin-bottom: 8px;
-  }
+  &__image {
+    position: relative;
 
-  &__image > img {
-    margin: auto;
-    width: 100%;
+    > img {
+      margin: auto;
+      width: 100%;
+    }
   }
 
   &__title {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 
   &__button {
@@ -50,11 +47,16 @@ $height: $card-width/1.778;
   }
 
   &__content {
-    padding: 32px;
+    padding: 2rem;
 
     > p {
       font-size: 14px;
-      margin-bottom: 16px;
+      line-height: 24px;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }

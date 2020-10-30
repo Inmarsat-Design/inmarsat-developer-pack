@@ -1,31 +1,50 @@
 .inm-tag {
   @include uppercase-style;
-  background-color: $dark-green;
-  color: $white;
+  background-color: $violet;
+  color: $black;
   display: inline-block;
+  margin: 2rem 1.25rem;
   padding: 0.75rem 1rem;
 
   &--pos-bottom-left {
     bottom: 0;
     left: 0;
+    margin: 0;
     position: absolute;
   }
 
   &--pos-top-left {
     left: 0;
+    margin: 0;
     position: absolute;
     top: 0;
   }
 
-  &--fill-mid-blue-grey {
-    background-color: $mid-blue;
+  &--fill-violet {
+    background-color: $violet;
   }
 
-  &--fill-dark-green {
-    background-color: $dark-green;
+  &--fill-mint-green {
+    background-color: $mint-green;
   }
 
-  &--fill-blue-grey {
-    background-color: $mid-blue-grey;
+  &--fill-teal {
+    background-color: $teal;
+  }
+
+  &--fill-aqua {
+    background-color: $aqua;
+  }
+
+  &--fill-yellow {
+    background-color: $yellow;
+  }
+
+  &--fill-lime-green {
+    background-color: $lime-green;
+  }
+
+  &--fill-white {
+    background-color: $white;
   }
 }

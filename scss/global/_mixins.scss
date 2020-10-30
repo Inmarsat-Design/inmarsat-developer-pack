@@ -25,29 +25,32 @@
   }
 }
 
-@mixin input-field($bg:'light') {
+@mixin input-field($bg: 'light') {
+  align-items: center;
+  appearance: none;
+  border-radius: $border-radius-small;
+  color: $grey-100;
+  display: flex;
+  font-size: 14px;
+  height: 3rem;
+  line-height: 24px;
+  max-width: 100%;
+  outline: none;
+  padding: 0.5rem 1rem;
+  width: 304px;
+
   @if $bg == 'light' {
-    align-items: center;
-    appearance: none;
     background-color: $white;
-    border: 1px solid $light-grey;
-    border-radius: $border-radius-small;
-    display: flex;
-    font-size: 0.75rem;
-    height: 3rem;
-    max-width: 100%;
-    outline: none;
-    padding: 0.5rem 1rem;
-    width: 304px;
+    border: 1px solid $grey-25;
 
     &,
     &::placeholder {
-      color: $mid-grey;
+      color: $grey-100;
     }
     @content;
   } @else {
-    background-color: $dark-blue;
-    border: 1px solid $dark-blue-grey;
+    background-color: $black;
+    border: 1px solid $grey-75;
 
     &,
     &::placeholder {
@@ -61,40 +64,50 @@
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
 @mixin close-button {
   cursor: pointer;
-  margin: 1.5rem;
+  margin: 2rem;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-@mixin chevron($color: $white, $direction:'forward') {
+@mixin chevron($color: currentColor, $direction: 'forward') {
   border: 1.5px solid $color;
   content: '';
   display: inline-block;
   height: 0.5rem;
-  transform: rotate(-45deg);
+  transform-origin: center;
   width: 0.5rem;
 
   @if $direction == 'backward' {
     border-bottom-style: none;
     border-right-style: none;
     margin-right: 1rem;
+    transform: rotate(-45deg);
+  } @else if $direction == 'down' {
+    border-right-style: none;
+    border-top-style: none;
+    transform: translateY(-2px) rotate(-45deg);
+  } @else if $direction == 'up' {
+    border-bottom-style: none;
+    border-left-style: none;
+    transform: translateY(2px) rotate(-45deg);
   } @else {
     border-left-style: none;
     border-top-style: none;
     margin-left: 1rem;
+    transform: rotate(-45deg);
   }
 }
 
 @mixin tick-box() {
   background-color: $white;
-  border: $border-light-grey;
+  border: 1px solid $grey-25;
   content: '';
   display: inline-block;
   height: $tick-box-height;

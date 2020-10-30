@@ -5,7 +5,7 @@
 
 .inm-list-item {
   background-color: $white;
-  border-radius: $border-radius;
+  border-radius: $border-radius-small;
   display: flex;
   margin-bottom: 2rem;
   padding: 1.5rem 1.5rem 2rem;
@@ -30,7 +30,7 @@
     width: 1.5rem;
 
     > * {
-      fill: $dark-blue;
+      fill: $black;
     }
   }
 
@@ -43,17 +43,17 @@
   }
 
   &__meta {
-    color: $mid-grey;
     font-size: $font-size-tiny;
+    line-height: 20px;
     margin-bottom: 1rem;
   }
 
   &__copy {
-    color: $dark-grey;
     font-size: $font-size-small;
+    line-height: 24px;
     margin-bottom: 1rem;
     max-width: 100%;
-    width: 600px;
+    width: 580px;
   }
 
   &__cta {

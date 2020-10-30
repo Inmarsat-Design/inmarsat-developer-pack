@@ -1,5 +1,7 @@
 .inm-content {
   display: flex;
+  margin: 0 auto;
+  max-width: $content-max-width;
 }
 
 .inm-content__sidebar {
@@ -24,7 +26,7 @@
 }
 
 .inm-section--bottom-border {
-  border-bottom: 1px solid $white-grey;
+  border-bottom: 1px solid $grey-0;
   padding-bottom: 16px;
 }
 
@@ -33,7 +35,11 @@
     padding: 80px $content-side-margin-tablet;
   }
 
-  .inm-content__main--indent {
-    margin-left: (256px);
+  .inm-content--no-sidebar {
+    &::before {
+      content: '';
+      display: block;
+      flex: 0 0 256px;
+    }
   }
 }

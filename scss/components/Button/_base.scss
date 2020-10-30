@@ -1,28 +1,56 @@
-@mixin height($height) {
-  border-radius: $height/2;
-  height: $height;
-}
-
 .inm-button {
-  @include height(56px);
   align-items: center;
-  background-color: $dark-blue;
+  background-color: $pink;
   border: 1px solid transparent;
-  color: $white;
+  border-radius: $border-radius-small;
+  color: $black;
   cursor: pointer;
   display: inline-flex;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 0 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  height: 56px;
+  line-height: 16px;
+  margin: 0 1rem 1rem;
   padding: 0 2rem;
   position: relative;
-  text-transform: uppercase;
+  text-decoration: none;
 
+  &__icon {
+    &,
+    g {
+      fill: currentColor;
+    }
+  }
+
+  &__icon--hover {
+    display: none;
+  }
+
+  &:disabled {
+    background-color: $grey-50 !important;
+    color: $black !important;
+    cursor: unset;
+    opacity: 50%;
+  }
+
+  &.inm-button--force-hover,
   &:hover {
-    background-color: #033c6f;
-    color: $white;
+    background-color: transparent;
+    border-color: $pink;
+    color: $pink;
     text-decoration: none;
+
+    .inm-button__icon--idle {
+      display: none;
+    }
+
+    .inm-button__icon--hover {
+      display: block;
+    }
+  }
+
+  &--no-hover {
+    pointer-events: none;
   }
 }
 
@@ -30,32 +58,13 @@
   margin-left: 0;
 }
 
-.inm-button--secondary {
-  background-color: transparent;
-  border-color: $dark-blue;
-  color: $dark-blue;
-
-  &:hover {
-    background-color: transparent;
-    border-color: #033c6f;
-    color: #033c6f;
-  }
-
-  &.inm-button--chevron::after {
-    border-color: $mid-blue;
-  }
-
-  // todo: use icon fonts
-  .inm-button__icon {
-    &,
-    g {
-      fill: $mid-blue;
-    }
-  }
+.inm-button--medium {
+  height: 48px;
+  line-height: 16px;
 }
 
 .inm-button--small {
-  @include height(40px);
+  height: 40px;
   line-height: 14px;
 }
 
@@ -93,95 +102,61 @@
   }
 }
 
-// button colors:
+.inm-button--black {
+  background-color: $black;
+  color: $white;
 
-.inm-button--dark-blue {
-  background-color: $dark-blue;
-
-  &.inm-button--chevron::after {
-    border-color: $mid-blue;
-  }
-
-  &.inm-button__icon {
-    &,
-    g {
-      fill: $mid-blue;
-    }
-  }
-}
-
-.inm-button--mid-blue {
-  background-color: $mid-blue;
-
-  &.inm-button--chevron::after {
-    border-color: $white;
-  }
-
-  &.inm-button__icon {
-    &,
-    g {
-      fill: $white;
-    }
-  }
-
+  &.inm-button--force-hover,
   &:hover {
-    background-color: #007eb1;
-  }
-}
-
-.inm-button--dark-green {
-  background-color: $dark-green;
-
-  &.inm-button--chevron::after {
-    border-color: $white;
-  }
-
-  &:hover {
-    background-color: #0a8006;
+    border-color: $black;
+    color: $black;
   }
 }
 
 .inm-button--white {
   background-color: $white;
 
-  &,
+  &.inm-button--force-hover,
   &:hover {
-    color: $dark-blue;
-  }
-
-  &.inm-button--chevron::after {
-    border-color: $mid-blue;
-  }
-
-  .inm-button__icon {
-    &,
-    g {
-      fill: $mid-blue;
-    }
-  }
-
-  &:hover {
-    background-color: #eff4f7;
+    // background-color: $white-hover;
+    border-color: $white;
+    color: $white;
   }
 }
 
-// todo: consider changing these to button--secondary-mid-blue or button-secondary--mid-blue
-.inm-button--secondary--mid-blue {
-  border-color: $mid-blue;
-  color: $mid-blue;
+.inm-button--secondary {
+  background-color: transparent;
+  border-color: $black;
+  color: $black;
 
+  &.inm-button--force-hover,
   &:hover {
-    border-color: #007db1;
-    color: #007db1;
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: transparent !important;
+    opacity: 25%;
   }
 }
 
-.inm-button--secondary--white {
+.inm-button--secondary-white {
+  background-color: transparent;
   border-color: $white;
   color: $white;
 
+  &.inm-button--force-hover,
   &:hover {
-    border-color: #eff4f7;
-    color: #eff4f7;
+    background-color: $white;
+    border-color: $white;
+    color: $black;
+  }
+
+  &:disabled {
+    background-color: transparent !important;
+    color: $white !important;
+    opacity: 25%;
   }
 }
